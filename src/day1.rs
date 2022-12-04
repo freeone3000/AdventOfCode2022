@@ -3,11 +3,9 @@ use std::io::{BufRead, BufReader};
 
 fn parse_biggest(filename: &str) -> [i32; 3] {
     let f = File::open(filename).expect("Can open given file");
-    let mut reader = BufReader::new(f);
-    let mut line = String::new();
+    let reader = BufReader::new(f);
 
     let mut values = [0; 3];
-
     let mut cur_value = 0;
     for line_w in reader.lines() {
         let line = line_w.unwrap();
