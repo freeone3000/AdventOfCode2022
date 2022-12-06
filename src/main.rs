@@ -2,6 +2,7 @@ mod day1;
 mod day2;
 mod day3;
 mod day4;
+mod day5;
 
 fn print_separator() {
     println!("========================================");
@@ -34,4 +35,11 @@ fn main() {
     assert_eq!(day4_test.1, 4);
     let day4 = day4::main("input/day4.txt");
     println!("Day 4:\n Part 1: {}\n Part 2: {}", day4.0, day4.1);
+
+    print_separator();
+    let day5_test = day5::main("input/day5_test.txt");
+    assert_eq!(day5_test.0, "CMZ");
+    assert_eq!(day5_test.1, "MCD");
+    let day5 = day5::main("input/day5.txt");
+    println!("Day 5:\n Part 1: {}\n Part 2: {}", day5.0, day5.1);
 }
