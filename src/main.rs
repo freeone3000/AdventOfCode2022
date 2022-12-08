@@ -5,6 +5,7 @@ mod day4;
 mod day5;
 mod day6;
 mod rotate_buffer;
+mod day7;
 
 fn print_separator() {
     println!("========================================");
@@ -50,4 +51,11 @@ fn main() {
     assert_eq!(day6_test, vec!((7, 19), (5, 23), (6, 23), (10, 29), (11, 26)));
     let day6 = day6::main("input/day6.txt");
     println!("Day 6:\n Part 1: {}\n Part 2: {}", day6[0].0, day6[0].1);
+
+    print_separator();
+    let day7_test = day7::main("input/day7_test.txt");
+    assert_eq!(day7_test.0, 95437);
+    assert_eq!(day7_test.1, 24933642);
+    let day7 = day7::main("input/day7.txt");
+    println!("Day 7:\n Part 1: {}\n Part 2: {}", day7.0, day7.1);
 }
