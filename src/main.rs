@@ -6,12 +6,14 @@ mod day5;
 mod day6;
 mod rotate_buffer;
 mod day7;
+mod day8;
 
 fn print_separator() {
     println!("========================================");
 }
 
 fn main() {
+    // TODO do actual tests!
     let day1_test = day1::main("input/day1_test.txt");
     assert_eq!(day1_test.0, 24000);
     assert_eq!(day1_test.1, 45000);
@@ -58,4 +60,11 @@ fn main() {
     assert_eq!(day7_test.1, 24933642);
     let day7 = day7::main("input/day7.txt");
     println!("Day 7:\n Part 1: {}\n Part 2: {}", day7.0, day7.1);
+
+    print_separator();
+    let day8_test = day8::main("input/day8_test.txt");
+    assert_eq!(day8_test.0, 21);
+    assert_eq!(day8_test.1, 8);
+    let day8 = day8::main("input/day8.txt");
+    println!("Day 8:\n Part 1: {}\n Part 2: {}", day8.0, day8.1);
 }
