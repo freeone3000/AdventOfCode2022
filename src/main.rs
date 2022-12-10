@@ -7,6 +7,7 @@ mod day6;
 mod rotate_buffer;
 mod day7;
 mod day8;
+mod day9;
 
 fn print_separator() {
     println!("========================================");
@@ -67,4 +68,10 @@ fn main() {
     assert_eq!(day8_test.1, 8);
     let day8 = day8::main("input/day8.txt");
     println!("Day 8:\n Part 1: {}\n Part 2: {}", day8.0, day8.1);
+
+    print_separator();
+    let day9_test = day9::main("input/day9_test.txt");
+    assert_eq!(day9_test.0, 13);
+    let day9 = day9::main("input/day9.txt");
+    println!("Day 9:\n Part 1: {}\n Part 2: {}", day9.0, day9.1);
 }
